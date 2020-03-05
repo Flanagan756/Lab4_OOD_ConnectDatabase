@@ -20,9 +20,9 @@
             <ColumnDefinition Width="*"/>
 
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="lbxStockLevel" Grid.Row="1" Margin="10"/>
-        <ListBox x:Name="lbxSuppliers"  Grid.Row="1" Grid.Column="1" Margin="10"/>
-        <ListBox x:Name="lbxCountry"    Grid.Row="1" Grid.Column="2" Margin="10"/>
+        <ListBox x:Name="lbxStockLevel" Grid.Row="1" Margin="10" SelectionChanged="lbxStockLevel_SelectionChanged"/>
+        <ListBox x:Name="lbxSuppliers"  Grid.Row="1" Grid.Column="1" Margin="10" DisplayMemberPath="SupplierName" SelectedValuePath="SupplierID" SelectionChanged="lbxSuppliers_SelectionChanged"/>
+        <ListBox x:Name="lbxCountry"    Grid.Row="1" Grid.Column="2" Margin="10" SelectionChanged="lbxCountry_SelectionChanged"/>
         <ListBox x:Name="lbxProducts"   Grid.Row="3" Grid.ColumnSpan="3" Margin="10"/>
         
         <Label Content="Stock Level" Grid.Row="0" Grid.Column="0"/>
