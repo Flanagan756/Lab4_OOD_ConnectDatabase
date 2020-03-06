@@ -1,0 +1,30 @@
+﻿<Window x:Class="Q2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Q2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
+
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="lbxCustomers" HorizontalAlignment="Left" Height="109" VerticalAlignment="Top" Width="376" Margin="10,41,0,0" SelectionChanged="lbxCustomers_SelectionChanged"/>
+        <ListBox x:Name="lbxOrders" HorizontalAlignment="Left" Height="109" VerticalAlignment="Top" Width="376" Grid.Column="1" Margin="10,41,0,0" SelectionChanged="lbxOrders_SelectionChanged" SelectedValuePath="SalesOrderID"/>
+
+        <DataGrid Grid.Row="3" Margin="10" Name="dgOrdersDetils" Grid.ColumnSpan="2"/>
+        <Label Content="Order Detatils" Grid.Row="1" Grid.ColumnSpan="2" Margin="353,24,350,10"/>
+        <Label Content="Order Summary" Grid.Column="1" Margin="10,10,286,144"/>
+
+    </Grid>
+</Window>
